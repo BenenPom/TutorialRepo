@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 
@@ -52,8 +53,16 @@ public class MontyHall : MonoBehaviour
 
             // Grab their Platform component and set their scene indices
             // based on what the winning platform is.
-            
+
             /* Your code here */
+            if (i == winningPlatform)
+            {
+                platforms[i].GetComponent<Platform>().targetSceneId = 1;
+            }
+            else
+            {
+                platforms[i].GetComponent<Platform>().targetSceneId = 2;
+            }
 
         }
 
